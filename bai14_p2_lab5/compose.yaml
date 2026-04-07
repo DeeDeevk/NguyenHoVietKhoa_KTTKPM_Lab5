@@ -1,0 +1,18 @@
+services:
+  app-server:
+    image: alpine
+    container_name: server_container
+    networks:
+      - my_private_network
+    command: sleep infinity # Giữ container chạy để ta vào test
+
+  app-client:
+    image: alpine
+    container_name: client_container
+    networks:
+      - my_private_network
+    command: sleep infinity
+
+networks:
+  my_private_network:
+    driver: bridge
