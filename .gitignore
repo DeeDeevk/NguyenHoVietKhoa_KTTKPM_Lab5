@@ -1,0 +1,26 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+.dockerignore
+
+# Environment variables (Cực kỳ quan trọng nếu bạn dùng file .env)
+.env
+.env.test
+.env.local
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# IDE Settings
+.vscode/
+.idea/
+*.swp
+*.swo
