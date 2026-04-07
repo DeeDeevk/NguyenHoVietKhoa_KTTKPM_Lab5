@@ -1,0 +1,15 @@
+services:
+  redis-limited:
+    image: redis:alpine
+    container_name: redis_resource_limit
+    restart: always
+    ports:
+      - "6379:6379"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'     # Giới hạn tối đa 50% CPU (nửa nhân)
+          memory: 256M     # Giới hạn tối đa 256MB RAM
+        reservations:
+          cpus: '0.25'     # Đảm bảo luôn có ít nhất 25% CPU cho container này
+          memory: 128M     # Đảm bảo luôn có ít nhất 128MB RAM
